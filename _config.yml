@@ -1,17 +1,17 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+title:          雑記
+description:    "がんばります"
+baseurl:        "/blog"
+url:            "http://kobaryo222.com"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Ryohei Kobayashi
+  url:          https://twitter.com/6Lgug
+  email:        kobaryo222912@gmail.com
 
 # Build settings
 markdown:       kramdown
@@ -31,11 +31,16 @@ plugins:
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /:year-:month-:day/:title
+permalink:      /:year-:month-:day/:title:output_ext
 paginate:       5
 
 # Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec, Makefile]
+
+# KaTeX
+kramdown:
+  math_engine: katex
+  smart_quotes: ["apos", "apos", "quot", "quot"]
 
 # Disqus (Set to your disqus id)
-disqus:         jekyll-tale
+# disqus:         jekyll-tale
