@@ -8,6 +8,8 @@ excerpt_separator: <!--more-->
 
 自分で書いたことがなかったのでありがたいページ([ダブリングによる木の最近共通祖先（LCA：Lowest Common Ancestor）を求めるアルゴリズム](https://algo-logic.info/lca/))を参考に書いた。
 
+繰り返し二乗法パートかなり賢くてすげ～
+
 ```cpp
 #include <iostream>
 #include <vector>
