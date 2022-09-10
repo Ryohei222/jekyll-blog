@@ -19,6 +19,6 @@ jobs:
           path: _site/
           remote_path: /var/www/html/kobaryo222.com/blog
           remote_host: kobaryo222.com
-          remote_port: 80
+          remote_port: 22
           remote_user: mikunyan
           remote_key: ${{ secrets.DEPLOY_KEY }}
