@@ -1,0 +1,24 @@
+name: Build and deploy Jekyll site to Raspberry Pi
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  raspi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build Jekyll
+        uses: jerryjvl/jekyll-build-action@v1
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@5.2.1
+        with:
+          switches: -avzr --delete --exclude="" --include="" --filter=""
+          path: _site/
+          remote_path: /var/www/html/kobaryo222.com/blog
+          remote_host: kobaryo222.com
+          remote_port: 80
+          remote_user: mikunyan
+          remote_key: ${{ secrets.DEPLOY_KEY }}
